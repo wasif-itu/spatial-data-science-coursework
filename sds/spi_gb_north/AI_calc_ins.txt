@@ -1,0 +1,317 @@
+
+# What Your Accessibility Index Should Measure
+
+Your index should answer:
+
+> “How efficiently can transportation move through northern Pakistan considering road infrastructure and terrain?”
+
+That is a strong and defensible definition.
+
+---
+
+# Recommended Framework For Your Case
+
+You should use a:
+
+```text id="lhxvq0"
+road-network + terrain impedance model
+```
+
+NOT a pure cost-distance wilderness model.
+
+---
+
+# The Best Workflow For You
+
+---
+
+# STEP 1 — Prepare OSM Roads
+
+Keep:
+
+```python id="f2v1zc"
+[
+ 'motorway',
+ 'trunk',
+ 'primary',
+ 'secondary',
+ 'tertiary',
+ 'unclassified',
+ 'residential',
+ 'track'
+]
+```
+
+Important:
+KEEP `track`
+because many northern settlements depend on them.
+
+---
+
+# STEP 2 — Build Road Graph
+
+Use:
+
+* [OSMnx Documentation](https://osmnx.readthedocs.io/en/stable/?utm_source=chatgpt.com)
+
+Convert roads into:
+
+```text id="6ibznf"
+nodes + edges
+```
+
+where:
+
+* nodes = intersections
+* edges = road segments
+
+---
+
+# STEP 3 — Assign Base Speeds
+
+Example:
+
+| Road Type | Base Speed |
+| --------- | ---------- |
+| motorway  | 80         |
+| trunk     | 60         |
+| primary   | 45         |
+| secondary | 35         |
+| tertiary  | 25         |
+| track     | 10         |
+
+These should represent:
+
+```text id="lybv6y"
+real mountain travel
+```
+
+NOT theoretical speed limits.
+
+---
+
+# STEP 4 — Modify Speeds Using Terrain
+
+This is the MOST important part.
+
+Northern Pakistan roads are slow mainly because of:
+
+* slope
+* curvature
+* terrain ruggedness
+
+You already have DEM.
+
+From DEM derive:
+
+* slope raster
+* ruggedness/TRI
+
+---
+
+# Recommended Speed Reduction Logic
+
+Example:
+
+| Slope  | Speed Modifier |
+| ------ | -------------- |
+| 0–5°   | ×1.0           |
+| 5–15°  | ×0.8           |
+| 15–25° | ×0.6           |
+| >25°   | ×0.4           |
+
+Final speed:
+
+```text id="kj8bpo"
+base_speed × terrain_modifier
+```
+
+This is MUCH more important than land cover for transportation accessibility.
+
+---
+
+# STEP 5 — Optional Surface Quality Adjustment
+
+If OSM contains:
+
+* `surface=*`
+* `tracktype=*`
+
+use them.
+
+Example:
+
+| Surface | Modifier |
+| ------- | -------- |
+| asphalt | ×1.0     |
+| gravel  | ×0.7     |
+| dirt    | ×0.5     |
+| rocky   | ×0.3     |
+
+---
+
+# STEP 6 — Compute Travel Time
+
+For each road segment:
+
+T_{edge}=\frac{L}{V}\times60
+
+Where:
+
+* (L) = segment length
+* (V) = adjusted speed
+
+This gives:
+
+```text id="fjlwm2"
+minutes per segment
+```
+
+---
+
+# STEP 7 — Accessibility Calculation
+
+Now compute:
+
+```text id="wfr8uc"
+minimum travel time
+```
+
+through the network.
+
+Using:
+
+* Dijkstra
+  or
+* A*
+
+Outputs:
+
+* travel-time surface
+* accessibility isochrones
+* connectivity maps
+
+---
+
+# STEP 8 — Create Accessibility Index
+
+Convert travel time into normalized accessibility.
+
+Example:
+
+| Travel Time | Accessibility |
+| ----------- | ------------- |
+| <30 min     | Very High     |
+| 30–60       | High          |
+| 1–2 hr      | Moderate      |
+| 2–4 hr      | Low           |
+| >4 hr       | Very Low      |
+
+Normalize:
+
+```text id="8ql9dg"
+0 → inaccessible
+1 → highly accessible
+```
+
+---
+
+# VERY Important Conceptual Point
+
+For your project:
+
+```text id="2jlwmf"
+accessibility = travel efficiency
+```
+
+NOT:
+
+```text id="m3ul0h"
+distance to nearest road
+```
+
+That distinction matters academically.
+
+---
+
+# Should You Use Land Cover?
+
+Yes — but lightly.
+
+For transportation accessibility:
+
+* land cover is secondary.
+
+Why?
+
+Because roads already encode most movement feasibility.
+
+Land cover mainly matters for:
+
+* roadless terrain
+* detours
+* sparse networks
+
+I would use it only as:
+
+```text id="2zc0a4"
+minor terrain friction adjustment
+```
+
+NOT as a dominant factor.
+
+---
+
+# Strong Recommendation
+
+Your strongest methodological structure is probably:
+
+## Primary Component (70–80%)
+
+Road-network travel time
+
+## Secondary Component (20–30%)
+
+Terrain impedance from DEM
+
+This fits northern Pakistan extremely well.
+
+---
+
+# Final Recommended Architecture
+
+## Inputs
+
+✅ OSM roads
+✅ DEM
+✅ land cover
+
+## Derived Layers
+
+✅ slope
+✅ ruggedness
+✅ adjusted road speed
+✅ travel-time edges
+
+## Analysis
+
+✅ network routing
+✅ least travel time
+✅ terrain-adjusted accessibility
+
+## Output
+
+✅ continuous accessibility index
+✅ isochrones
+✅ regional accessibility zones
+✅ accessibility heatmaps
+
+This is already a strong, defensible mountain transportation accessibility framework.
+
+
+
+
+
+
+from 
+Assessment of the Accessibility of Potential Geosites and GIS-Based Design of Optimal Georoutes in Ardahan Province (Türkiye)
