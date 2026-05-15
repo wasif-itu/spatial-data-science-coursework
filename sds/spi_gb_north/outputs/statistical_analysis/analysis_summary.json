@@ -1,0 +1,59 @@
+{
+  "n_tehsils": 81,
+  "moran": [
+    {
+      "variable": "SPI",
+      "I": 0.809720644690326,
+      "expected_I": -0.0125,
+      "z_score": 10.751348182722689,
+      "p_value": 0.001,
+      "sim_mean": -0.012536635356685519,
+      "sim_std": 0.07647945783844773
+    },
+    {
+      "variable": "AI",
+      "I": 0.8892728138829864,
+      "expected_I": -0.0125,
+      "z_score": 12.158302558955196,
+      "p_value": 0.001,
+      "sim_mean": -0.008704354835713317,
+      "sim_std": 0.07385711651477983
+    },
+    {
+      "variable": "Gap index",
+      "I": 0.8835906739782494,
+      "expected_I": -0.0125,
+      "z_score": 11.969359096007857,
+      "p_value": 0.001,
+      "sim_mean": -0.010456023110292863,
+      "sim_std": 0.07469461730718178
+    }
+  ],
+  "ols": {
+    "n": 81.0,
+    "intercept": 0.4034461926005642,
+    "ai_coefficient": -0.9114335419922585,
+    "ai_p_value": 3.934851162015606e-14,
+    "r_squared": 0.5173093439898802,
+    "adj_r_squared": 0.5111993356859545,
+    "f_statistic": 84.665898679306,
+    "f_p_value": 3.934851162014935e-14,
+    "residual_sigma": 0.21970724495900026,
+    "pearson_r": -0.7192422012019876,
+    "spearman_rho": -0.7696702800361337,
+    "residual_moran_i": 0.6350376693099545,
+    "residual_moran_p": 0.001,
+    "breusch_pagan_lm": 4.197112271034437,
+    "breusch_pagan_p": 0.04049287814265443,
+    "jarque_bera_stat": 3.845479193137343,
+    "jarque_bera_p": 0.14620586786904946,
+    "residual_skew": 0.5282147406759181,
+    "residual_kurtosis": 3.1528332206745473
+  },
+  "priority_counts": {
+    "strict": 11,
+    "relaxed": 30,
+    "lisa_gap": 23
+  },
+  "outputs_dir": "C:\\Users\\AtifA\\Desktop\\Wasif SDS Project\\sds\\sds\\spi_gb_north\\outputs\\statistical_analysis"
+}

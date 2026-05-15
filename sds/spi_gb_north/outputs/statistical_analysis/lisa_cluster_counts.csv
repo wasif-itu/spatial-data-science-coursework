@@ -1,0 +1,10 @@
+cluster,count,variable
+Not Significant,46,SPI
+HH,19,SPI
+LL,16,SPI
+Not Significant,47,AI
+LL,22,AI
+HH,12,AI
+Not Significant,41,Gap
+HH,23,Gap
+LL,17,Gap

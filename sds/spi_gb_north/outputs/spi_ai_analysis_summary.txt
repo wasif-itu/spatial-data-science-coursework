@@ -1,19 +1,19 @@
-SCENIC POTENTIAL & ACCESSIBILITY ANALYSIS â€” SUMMARY REPORT
+SCENIC POTENTIAL & ACCESSIBILITY ANALYSIS — SUMMARY REPORT
 ============================================================
 
-SPI Range: [-2.097, 3.749]  mean=-0.000
-AI Range:  [0.000, 1.000]  mean=0.455
+SPI Range: [-2.097, 3.748]  mean=0.000
+AI Range:  [0.000, 1.000]  mean=0.456
 
 TOP 5 TEHSILS BY SPI:
-  Zone_39: 0.289
-  Zone_13: 0.288
-  Zone_55: 0.286
-  Zone_79: 0.247
-  Zone_71: 0.236
+  ATHUMQAM: 0.292
+  GOJAL: 0.291
+  PALAS: 0.281
+  SHARINGAL: 0.243
+  BAHRAIN: 0.234
 
 TOP 5 TEHSILS BY AI:
-  Zone_15: 0.961
-  Zone_20: 0.959
-  Zone_8: 0.957
-  Zone_77: 0.954
-  Zone_2: 0.948
+  HAJEERA: 0.959
+  KHAR: 0.958
+  NAKIAL: 0.955
+  TORGHER: 0.951
+  BARNALA: 0.948
