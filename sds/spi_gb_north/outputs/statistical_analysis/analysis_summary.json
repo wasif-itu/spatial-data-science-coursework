@@ -3,57 +3,57 @@
   "moran": [
     {
       "variable": "SPI",
-      "I": 0.809720644690326,
+      "I": 0.8146335687191582,
       "expected_I": -0.0125,
-      "z_score": 10.751348182722689,
+      "z_score": 10.731652050609249,
       "p_value": 0.001,
-      "sim_mean": -0.012536635356685519,
-      "sim_std": 0.07647945783844773
+      "sim_mean": -0.008862111085823016,
+      "sim_std": 0.07677365475578206
     },
     {
       "variable": "AI",
-      "I": 0.8892728138829864,
+      "I": 0.8892569652323905,
       "expected_I": -0.0125,
-      "z_score": 12.158302558955196,
+      "z_score": 11.839158211511064,
       "p_value": 0.001,
-      "sim_mean": -0.008704354835713317,
-      "sim_std": 0.07385711651477983
+      "sim_mean": -0.011292025175139426,
+      "sim_std": 0.07610338828116477
     },
     {
       "variable": "Gap index",
-      "I": 0.8835906739782494,
+      "I": 0.8854643032924471,
       "expected_I": -0.0125,
-      "z_score": 11.969359096007857,
+      "z_score": 12.256189809489253,
       "p_value": 0.001,
-      "sim_mean": -0.010456023110292863,
-      "sim_std": 0.07469461730718178
+      "sim_mean": -0.017010624006200972,
+      "sim_std": 0.07367109761481144
     }
   ],
   "ols": {
     "n": 81.0,
-    "intercept": 0.4034461926005642,
-    "ai_coefficient": -0.9114335419922585,
-    "ai_p_value": 3.934851162015606e-14,
-    "r_squared": 0.5173093439898802,
-    "adj_r_squared": 0.5111993356859545,
-    "f_statistic": 84.665898679306,
-    "f_p_value": 3.934851162014935e-14,
-    "residual_sigma": 0.21970724495900026,
-    "pearson_r": -0.7192422012019876,
-    "spearman_rho": -0.7696702800361337,
-    "residual_moran_i": 0.6350376693099545,
+    "intercept": 0.4007767783103108,
+    "ai_coefficient": -0.9118249025493139,
+    "ai_p_value": 1.5363790267829526e-14,
+    "r_squared": 0.5285434162247777,
+    "adj_r_squared": 0.5225756113668635,
+    "f_statistic": 88.56580079421495,
+    "f_p_value": 1.5363790267829384e-14,
+    "residual_sigma": 0.21505356883191937,
+    "pearson_r": -0.7270099148050032,
+    "spearman_rho": -0.7757904245709124,
+    "residual_moran_i": 0.6361020171463352,
     "residual_moran_p": 0.001,
-    "breusch_pagan_lm": 4.197112271034437,
-    "breusch_pagan_p": 0.04049287814265443,
-    "jarque_bera_stat": 3.845479193137343,
-    "jarque_bera_p": 0.14620586786904946,
-    "residual_skew": 0.5282147406759181,
-    "residual_kurtosis": 3.1528332206745473
+    "breusch_pagan_lm": 4.648719340763925,
+    "breusch_pagan_p": 0.03107672415007968,
+    "jarque_bera_stat": 3.3565867166090477,
+    "jarque_bera_p": 0.18669232121117402,
+    "residual_skew": 0.49810553393635204,
+    "residual_kurtosis": 3.045909918062805
   },
   "priority_counts": {
-    "strict": 11,
+    "strict": 12,
     "relaxed": 30,
-    "lisa_gap": 23
+    "lisa_gap": 28
   },
-  "outputs_dir": "C:\\Users\\AtifA\\Desktop\\Wasif SDS Project\\sds\\sds\\spi_gb_north\\outputs\\statistical_analysis"
+  "outputs_dir": "c:\\Users\\AtifA\\Desktop\\Wasif SDS Project\\sds\\sds\\spi_gb_north\\outputs\\statistical_analysis"
 }
