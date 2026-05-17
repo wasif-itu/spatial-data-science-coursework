@@ -154,3 +154,6 @@ ehthumbs.db
 
 # Keep notebooks but not checkpoint caches
 !*.ipynb
+
+# Ignore landsat data directory
+/sds/landsat/

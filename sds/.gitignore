@@ -112,3 +112,6 @@ Thumbs.db
 # *.csv
 # *.xlsx
 # *.xls
+
+# Ignore local landsat folder
+landsat/
