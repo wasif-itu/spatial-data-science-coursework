@@ -1,159 +1,64 @@
-# ==========================================
-# Large Geospatial & Data Files
-# ==========================================
+# Python environments and caches
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+.mypy_cache/
+.pytest_cache/
 
-# Geospatial formats
-*.geojson
-*.gpkg
-*.tif
-*.tiff
-*.shp
-*.shx
-*.dbf
-*.prj
-*.cpg
-*.sbn
-*.sbx
+# Jupyter
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
 
-# Raster/gridded data
-*.nc
-*.grd
-*.hdf
-*.h5
+# Editor and OS metadata
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
 
-# Archive formats
+# Local configuration
+.env
+.env.local
+
+# Build, temporary, and logs
+build/
+dist/
+*.egg-info/
+*.tmp
+*.temp
+*.log
+
+# Local generated outputs
+outputs/
+figures/
+artifacts/
+*.png
+*.jpg
+*.jpeg
+*.pdf
+
+# Large local archives and raw downloads
 *.zip
 *.tar
 *.tar.gz
 *.7z
 *.rar
 
-# ==========================================
-# Data Directories (raw, interim, processed)
-# ==========================================
+# Heavy geospatial files should be added intentionally with git add -f when needed.
+*.tif
+*.tiff
+*.nc
+*.hdf
+*.h5
 
-# Bulk data folders
-/data/raw/
-/data/interim/
-/data/processed/
-/data/cache/
-/data/metadata/
-/data/
-
-# Per-project data directories
-**/data/raw/
-**/data/interim/
-**/data/processed/
-**/data/cache/
-**/data/metadata/
-
-# Course datasets
-/Course-Datasets/
-/course_datasets/
-
-# ==========================================
-# Cache & Temporary Files
-# ==========================================
-
-**/cache/
-.cache/
-.pytest_cache/
-.mypy_cache/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-
-# Jupyter
-.ipynb_checkpoints/
-*/.ipynb_checkpoints/
-
-# ==========================================
-# Python
-# ==========================================
-
-*.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# Virtual environments
-venv/
-env/
-ENV/
-.venv
-env.bak/
-venv.bak/
-.env
-.env.local
-
-# ==========================================
-# IDE & Editors
-# ==========================================
-
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-*.sublime-project
-*.sublime-workspace
-
-# ==========================================
-# OS Files
-# ==========================================
-
-.DS_Store
-Thumbs.db
-.Thumbs.db
-
-# ==========================================
-# Temporary & Log Files
-# ==========================================
-
-*.tmp
-*.temp
-*.log
-*.xlsx
-*.xls
-
-# OS metadata
-.trashes
-.VolumeIcon.icns
-ehthumbs.db
-
-# ==========================================
-# Project-specific (optional)
-# ==========================================
-
-# Outputs and figures (keep code, ignore rendered)
-/outputs/
-/figures/
-*.png
-*.jpg
-*.jpeg
-*.pdf
-
-# Keep notebooks but not checkpoint caches
-!*.ipynb
-
-# Ignore landsat data directory
-/sds/landsat/
+# Local data workspaces
+datasets/**/cache/
+datasets/**/raw/
+datasets/**/interim/
+datasets/**/processed/
