@@ -1,5 +1,0 @@
-weight_set,corr_with_current_spi,priority_count,priority_overlap_with_current_relaxed,priority_jaccard_with_current_relaxed
-proposal,0.9812711079916493,30,30,1.0
-equal,0.975382370541479,30,30,1.0
-terrain_emphasis,0.9575212799777253,30,30,1.0
-vegetation_water_emphasis,0.992185147060911,30,30,1.0

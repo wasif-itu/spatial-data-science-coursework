@@ -1,69 +1,56 @@
-# Spatial Data Science
-**Spring 2026**
+# Spatial Data Science Coursework
 
-[Remote Sensing & Spatial Analytics (RSA) Lab](https://sites.google.com/itu.edu.pk/rsa-lab/)
+This repository is my learning archive for the Spatial Data Science course. It contains course notebooks, assignments, practice work, and supporting datasets used while learning geospatial analysis with Python.
 
+The final project has been removed from this repository so this repo stays focused on course learning material. The project files have been preserved locally at:
 
-This a guideline on how to set up a conda environment, with the requisite packages, for the Spatial Data Science course. Please follow the instructions below.
-
-
-## Set up & Activate a Conda environment
-
-To set up and activate a new conda environment, you can use the following commands. Replace `your_environment_name` with the desired name for your new environment:
-
-- Create a new conda environment, by calling the following at your command-prompt/terminal.
-
-
-```bash
-conda create --name your_environment_name
+```text
+/home/wasif/spi-gb-north-project
 ```
 
-You can also specify a particular Python version when creating the environment:
+## Repository Focus
 
-```bash
-conda create --name your_environment_name python=3.9
-```
+- Spatial data handling and visualization
+- Choropleth mapping
+- Spatial weights and autocorrelation
+- Local indicators of spatial association
+- Point pattern analysis
+- Spatial inequality analysis
+- Clustering and regionalization
+- Variography and geostatistical exploration
+- Remote sensing exercises
+- In-class assignments and practice notebooks
 
-- Activate the conda environment:
+## Main Coursework Notebooks
 
-```bash
-conda activate your_environment_name
-```
+| Notebook | Topic |
+| --- | --- |
+| `sds/05_choropleth.ipynb` | Choropleth mapping |
+| `sds/06_spatial_autocorrelation.ipynb` | Spatial autocorrelation |
+| `sds/07_local_autocorrelation.ipynb` | Local autocorrelation |
+| `sds/08_point_pattern_analysis.ipynb` | Point pattern analysis |
+| `sds/09_spatial_inequality.ipynb` | Spatial inequality |
+| `sds/10_clustering_and_regionalization.ipynb` | Clustering and regionalization |
+| `sds/variography.ipynb` | Variography |
+| `sds/variography-revised.ipynb` | Revised variography work |
+| `sds/EX1_DN2Radiance.ipynb` | Remote sensing exercise |
 
-After activation, your command prompt or terminal prompt should change to show the active environment.
+Additional notebooks in `sds/` include assignments, class practice, experiments, and self-work completed during the course.
 
-Remember to replace `your_environment_name` with the actual name you want for your environment.
+## Environment
 
-## Install the libraries
-
-You're provided with a file (`requirements.txt`) that contains the required libraries for this course. These libraries are:
-
-```
-pandas
-numpy
-geopandas
-rioxarray
-xarray
-...
-
-```
-
-Place the `requirements.txt` file at any conveninent directory; a good idea is to set up a separate directory for all the code related to this course.  Please run the following command, after switching the prompt to that directory.
+Create and activate a Python environment, then install the required packages:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Normally, this should be fine, but if you run into some version conflicts, please let me know. During this process, the terminal will prompt you to confirm the installations. Please proceed. Several dependencies will automatically be installed alongside, such as the libraries `fiona`, `gdal`, etc. These libraries may also be used during the course.
+Some notebooks may require geospatial system libraries such as GDAL, Fiona, or PROJ depending on the local Python setup.
 
-General help regarding conflicts: At times, conflicts be resolved by breaking the install into smaller steps. First check the library that raised an error, and ascertain which requirement is unfulfilled. For example, if it says that `numpy` (or a certain version thereof) is required, just install it while removing the previous cache (during failed installation).
+## Data
 
-```bash
-pip install --no-cached-dir numpy
-```
+Course datasets are kept in `Course-Datasets/` and `data/`. Large generated files, caches, local environments, and temporary notebook artifacts are ignored where possible.
 
-Install other libraries step up step. Carefully watch for any breaks, and assess the conflict. The way around the conflict might be system specific (and can depend on the global installs previously made/available on your system).
+## Final Project
 
-
-
-
+The final project is being moved into a separate focused repository. This keeps the course repo readable as a record of learning, while the project repo can be structured around a single research question, methodology, outputs, and final submission.

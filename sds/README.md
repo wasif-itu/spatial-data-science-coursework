@@ -1,69 +1,36 @@
-# Spatial Data Science
-**Spring 2025**
+# Spatial Data Science Coursework Notebooks
 
-[Remote Sensing & Spatial Analytics (RSA) Lab](https://sites.google.com/itu.edu.pk/rsa-lab/)
+This folder contains my working notebooks and exercises from the Spatial Data Science course.
 
+## Topics Covered
 
-This a guideline on how to set up a conda environment, with the requisite packages, for the Spatial Data Science course. Please follow the instructions below.
+- Choropleth mapping
+- Spatial weights
+- Global spatial autocorrelation
+- Local spatial autocorrelation
+- Point pattern analysis
+- Spatial inequality
+- Clustering and regionalization
+- Variography
+- Remote sensing practice
+- Class assignments and self-work
 
+## Key Notebooks
 
-## Set up & Activate a Conda environment
+| Notebook | Topic |
+| --- | --- |
+| `05_choropleth.ipynb` | Choropleth mapping |
+| `06_spatial_autocorrelation.ipynb` | Spatial autocorrelation |
+| `07_local_autocorrelation.ipynb` | Local autocorrelation |
+| `08_point_pattern_analysis.ipynb` | Point pattern analysis |
+| `09_spatial_inequality.ipynb` | Spatial inequality |
+| `10_clustering_and_regionalization.ipynb` | Clustering and regionalization |
+| `variography.ipynb` | Variography |
+| `variography-revised.ipynb` | Revised variography work |
+| `EX1_DN2Radiance.ipynb` | Remote sensing exercise |
 
-To set up and activate a new conda environment, you can use the following commands. Replace `your_environment_name` with the desired name for your new environment:
+The final project content has been removed from this folder and preserved outside this repo at:
 
-- Create a new conda environment, by calling the following at your command-prompt/terminal.
-
-
-```bash
-conda create --name your_environment_name
+```text
+/home/wasif/spi-gb-north-project
 ```
-
-You can also specify a particular Python version when creating the environment:
-
-```bash
-conda create --name your_environment_name python=3.9
-```
-
-- Activate the conda environment:
-
-```bash
-conda activate your_environment_name
-```
-
-After activation, your command prompt or terminal prompt should change to show the active environment.
-
-Remember to replace `your_environment_name` with the actual name you want for your environment.
-
-## Install the libraries
-
-You're provided with a file (`requirements.txt`) that contains the required libraries for this course. These libraries are:
-
-```
-pandas
-numpy
-geopandas
-rioxarray
-xarray
-...
-
-```
-
-Place the `requirements.txt` file at any conveninent directory; a good idea is to set up a separate directory for all the code related to this course.  Please run the following command, after switching the prompt to that directory.
-
-```bash
-pip install -r requirements.txt
-```
-
-Normally, this should be fine, but if you run into some version conflicts, please let me know. During this process, the terminal will prompt you to confirm the installations. Please proceed. Several dependencies will automatically be installed alongside, such as the libraries `fiona`, `gdal`, etc. These libraries may also be used during the course.
-
-General help regarding conflicts: At times, conflicts be resolved by breaking the install into smaller steps. First check the library that raised an error, and ascertain which requirement is unfulfilled. For example, if it says that `numpy` (or a certain version thereof) is required, just install it while removing the previous cache (during failed installation).
-
-```bash
-pip install --no-cached-dir numpy
-```
-
-Install other libraries step up step. Carefully watch for any breaks, and assess the conflict. The way around the conflict might be system specific (and can depend on the global installs previously made/available on your system).
-
-
-
-
